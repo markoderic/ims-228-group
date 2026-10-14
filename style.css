@@ -11,3 +11,5 @@
 .gesture-grid h3{font-size:2cqw}.gesture-grid p{font-size:1.35cqw}.gesture-note{font-size:1.25cqw}
 
 .gesture-hint{font-size:12px;line-height:1.6;color:#426326;padding-top:10px;margin-top:10px;border-top:1px solid var(--line)}
+
+.panel-heading span.live{background:var(--green);color:#000}

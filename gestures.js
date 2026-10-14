@@ -81,14 +81,6 @@
       // the same raised fingers can continue navigating without a reset pose.
       if (!byGesture) { this.resetMotion(); this.navLocked = false; }
     }
-    getHint() {
-      if (this.pose === 'no hand') return 'Show one hand to the camera.';
-      if (this.pose === 'index finger') return 'Index finger ready. Swipe left for previous; keep this pose to repeat.';
-      if (this.pose === 'two fingers') return 'Two fingers ready. Swipe right for next; keep this pose to repeat.';
-      if (this.pose === 'fist') return this.pauseLatched ? 'Video paused. Use one or two fingers to swipe, or open your whole palm and hold to play.' : 'Fist detected.';
-      if (this.pose === 'open palm') return this.pauseLatched ? 'Open your whole palm and hold briefly to play.' : 'Raise two fingers for next, or only index for previous.';
-      return 'Keep the raised finger upright and the other fingers lowered.';
-    }
     update(hand, now, videoVisible) {
       const info = classifyHand(hand), s = this.settings;
       if (!info) { this.reset(); return null; }

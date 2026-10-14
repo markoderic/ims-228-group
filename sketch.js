@@ -12,7 +12,7 @@
   let inputCanvas = null, frameRequest = null, inferencePending = null;
   let inferenceStartedAt = 0, presentationFallback = false;
 
-  function feedback(message) { $('feedback').textContent = message; }
+  function feedback() {}
   function updateMediaUI() {
     $('play-pause').textContent = video.paused ? 'Play video' : 'Pause video';
     document.querySelector('.video-state').textContent = video.ended ? 'ENDED' : video.paused ? 'PAUSED' : 'PLAYING';
@@ -154,10 +154,11 @@
   }
   function status(message, badge = 'OFF') {
     $('camera-badge').textContent = badge;
+    $('camera-badge').classList.toggle('live', badge === 'LIVE');
     $('camera-status').textContent = message;
     $('camera-status').hidden = badge === 'LIVE';
   }
-  function clearTracking() { gestures.reset(); $('gesture-hint').textContent = 'Show one hand to the camera.'; }
+  function clearTracking() { gestures.reset(); }
   function stopCamera(message = 'Camera stopped.') {
     session++; active = false;
     if (frameRequest !== null) cancelAnimationFrame(frameRequest);
@@ -194,7 +195,6 @@
         const action = gestures.update(mirrorHand(valid[0]), performance.now(), currentSlide === 3);
         if (action) performGesture(action);
       } else clearTracking();
-      $('gesture-hint').textContent = gestures.getHint();
       status('', 'LIVE');
       frameRequest = requestAnimationFrame(() => detectFrame(token));
     } catch (error) {

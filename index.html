@@ -9,7 +9,7 @@
   <script defer src="sketch.js?v=8"></script>
 </head>
 <body>
-  <header class="topbar"><a href="#" class="brand" aria-label="Go to first slide">✳ <span>HAND REMOTE</span></a><span class="project-label">IMS 228 / GROUP 5</span><button id="fullscreen" class="quiet">Present fullscreen ↗</button></header>
+  <header class="topbar"><a href="#" class="brand" aria-label="Go to first slide"><span>HAND REMOTE</span></a><span class="project-label">IMS 228 / GROUP 5</span><button id="fullscreen" class="quiet">Present fullscreen ↗</button></header>
   <main class="workspace">
     <section class="presentation" aria-label="Presentation">
       <div class="slide-frame" tabindex="-1" aria-label="Slide presentation">
@@ -26,17 +26,14 @@
         </div>
       </div>
       <nav class="slide-controls" aria-label="Slide controls"><button id="previous" class="quiet">← Previous</button><div class="dots" id="slide-dots"></div><span id="slide-count" aria-live="polite">1 / 5</span><button id="next">Next →</button></nav>
-      <div class="feedback" id="feedback" role="status">Ready. Use the buttons or start the camera.</div>
       <div id="media-controls" class="media-controls" hidden><button id="play-pause">Play video</button><label class="file-label">Replace video <input id="video-file" type="file" accept="video/*"></label></div>
-      <p class="keyboard-help">Keyboard: ← / → slides · Space play / pause · F present · Esc exit presentation</p>
     </section>
     <aside class="camera-panel" aria-label="Hand tracking">
       <div class="panel-heading"><h2>Hand tracking</h2><span id="camera-badge">OFF</span></div>
       <div id="camera-view"><div id="camera-placeholder"><span>✋</span><p>Your camera preview<br>will appear here.</p></div></div>
       <div class="camera-actions"><button id="start-camera">Start camera</button><button id="stop-camera" class="quiet" disabled>Stop</button></div>
       <p id="camera-status" role="status">Camera stays off until you start it.</p>
-      <p id="gesture-hint" class="gesture-hint" role="status">Start camera to enable hand gestures.</p>
-      <div class="tips"><h3>Hand controls</h3><p>Index + middle up: swipe right for next.</p><p>Only index up: swipe left for previous.</p><p>Keep other fingers lowered. Keep the pose to repeat; hold still to stop.</p><p>On the video slide, make a fist to pause. Open your whole palm and hold to play.</p></div>
+      <div class="tips"><h3>Hand controls</h3><p>Index + middle up: swipe right for next.</p><p>Only index up: swipe left for previous.</p><p>Keep other fingers lowered. One swipe turns one slide; move your hand back to swipe again.</p><p>On the video slide, make a fist to pause. Open your whole palm and hold to play.</p></div>
       <p class="privacy">Your webcam picture stays on this device.</p>
     </aside>
   </main>
