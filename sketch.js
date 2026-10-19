@@ -67,7 +67,7 @@
   function updatePresentationMode() {
     const presenting = document.fullscreenElement === stage || presentationFallback;
     document.body.classList.toggle('presenting', presenting);
-    $('fullscreen').textContent = presenting ? 'Exit presentation' : 'Present fullscreen ↗';
+    $('fullscreen').textContent = presenting ? 'Exit presentation' : 'Present fullscreen';
     $('fullscreen').setAttribute('aria-pressed', String(presenting));
   }
   async function exitPresentation() {

@@ -4,12 +4,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Hand Remote · IMS 228</title>
-  <link rel="stylesheet" href="style.css?v=8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&family=Source+Serif+4:wght@600&display=swap">
+  <link rel="stylesheet" href="style.css?v=10">
   <script defer src="gestures.js?v=8"></script>
   <script defer src="sketch.js?v=8"></script>
 </head>
 <body>
-  <header class="topbar"><a href="#" class="brand" aria-label="Go to first slide"><span>HAND REMOTE</span></a><span class="project-label">IMS 228 / GROUP 5</span><button id="fullscreen" class="quiet">Present fullscreen ↗</button></header>
+  <header class="topbar"><a href="#" class="brand" aria-label="Go to first slide"><span>Hand Remote</span></a><span class="project-label">IMS 228, Group 5</span><button id="fullscreen" class="quiet">Present fullscreen</button></header>
   <main class="workspace">
     <section class="presentation" aria-label="Presentation">
       <div class="slide-frame" tabindex="-1" aria-label="Slide presentation">
@@ -46,7 +49,7 @@
 
         </div>
       </div>
-      <nav class="slide-controls" aria-label="Slide controls"><button id="previous" class="quiet">← Previous</button><div class="dots" id="slide-dots"></div><span id="slide-count" aria-live="polite">1 / 6</span><button id="next">Next →</button></nav>
+      <nav class="slide-controls" aria-label="Slide controls"><button id="previous" class="quiet">Previous</button><div class="dots" id="slide-dots"></div><span id="slide-count" aria-live="polite">1 / 6</span><button id="next">Next</button></nav>
       <div id="media-controls" class="media-controls" hidden><button id="play-pause">Play video</button><label class="file-label">Replace video <input id="video-file" type="file" accept="video/*"></label></div>
     </section>
     <aside class="camera-panel" aria-label="Hand tracking">
