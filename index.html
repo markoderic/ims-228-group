@@ -14,18 +14,39 @@
     <section class="presentation" aria-label="Presentation">
       <div class="slide-frame" tabindex="-1" aria-label="Slide presentation">
         <div class="slide-canvas">
-        <article class="slide title-slide" data-slide="0">
-          <div class="eyebrow">A MICRO-INTERACTION PROTOTYPE</div><h1>Hand<br><span>Remote.</span></h1><p class="subtitle">A presentation remote<br>you control with your hand.</p>
-          <div class="title-art" aria-hidden="true"><div class="orbit"></div><span>✋</span><div class="art-tag">MOVE. PRESENT. CONNECT.</div></div>
-          <p class="credits">IMS 228 Group 5<br>Ana Avramov · Jacob Brztowski<br>Yongzhen Lu · Marko Deric</p><div class="slide-footer"><span>HAND REMOTE</span><span>01 / 05</span></div>
-        </article>
-        <article class="slide" data-slide="1" hidden><div class="eyebrow">THE PURPOSE</div><h2>Why we built it.</h2><p class="intro">Stay with your audience.</p><div class="three-cards"><div><span class="number">01</span><h3>Keep your flow</h3><p>Changing slides interrupts a presentation.</p></div><div><span class="number">02</span><h3>Move freely</h3><p>Presenters have free hands but stand away from the laptop.</p></div><div><span class="number">03</span><h3>Use what you have</h3><p>A webcam replaces a handheld clicker.</p></div></div><div class="slide-footer"><span>HAND REMOTE</span><span>02 / 05</span></div></article>
-        <article class="slide" data-slide="2" hidden><div class="eyebrow">DELIBERATE GESTURES</div><h2>Gesture controls.</h2><div class="gesture-grid"><div><b>✌</b><h3>Next slide</h3><p>Index + middle up<br>Short swipe right</p></div><div><b>☝</b><h3>Previous slide</h3><p>Only index up<br>Short swipe left</p></div><div><b>✊</b><h3>Pause video</h3><p>Close your hand into a fist</p></div><div><b>✋</b><h3>Play video</h3><p>Open your whole palm<br>Hold briefly to play</p></div></div><p class="gesture-note">Keep the finger pose to repeat. Hold still to stop.</p><div class="slide-footer"><span>HAND REMOTE</span><span>03 / 05</span></div></article>
-        <article class="slide video-slide" data-slide="3" hidden><div class="eyebrow">THE LIVE DEMO</div><h2>Video demo.</h2><p class="video-caption">Make a fist to pause. Open your whole palm and hold to play.</p><div class="video-layout"><video id="demo-video" controls playsinline preload="metadata" src="assets/demo-video.mp4" poster="assets/video-poster.png" aria-label="Hand Remote demo video"></video><div class="video-side"><span class="video-state">PAUSED</span><p><strong>Fist</strong><br>Pause video</p><p><strong>Open palm + hold</strong><br>Play video</p></div></div><div class="slide-footer"><span>HAND REMOTE</span><span>04 / 05</span></div></article>
-        <article class="slide" data-slide="4" hidden><div class="eyebrow">PROTOTYPING & ITERATION</div><h2>Next steps.</h2><p class="intro">Make small gestures feel reliable.</p><div class="next-list"><p><span>01</span>Test gestures with different presenters</p><p><span>02</span>Check lighting and camera distance</p><p><span>03</span>Tune false triggers and arm effort</p></div><div class="test-label">TEST PLAN · NO USER TEST RESULTS YET</div><div class="slide-footer"><span>HAND REMOTE</span><span>05 / 05</span></div></article>
+       
+<article class="slide image-slide" data-slide="0">
+  <img src="assets/slides1.png" alt="Slide 1">
+</article>
+
+<article class="slide image-slide" data-slide="1" hidden>
+  <img src="assets/slides2.png" alt="Slide 2">
+</article>
+
+<article class="slide image-slide" data-slide="2" hidden>
+  <img src="assets/slides3.png" alt="Slide 3">
+</article>
+
+<article class="slide image-slide" data-slide="3" hidden>
+  <img src="assets/slides4.png" alt="Slide 4">
+</article>
+
+<article class="slide image-slide" data-slide="4" hidden>
+  <img src="assets/slides5.png" alt="Slide 5">
+</article>
+
+<article class="slide image-slide video-slide" data-slide="5" hidden>
+  <img src="assets/slides6.png" alt="Slide 6">
+  <video id="demo-video" controls playsinline preload="metadata"
+    src="assets/demo-video.mp4"
+    poster="assets/video-poster.png">
+  </video>
+  <span class="video-state" hidden>PAUSED</span>
+</article>
+
         </div>
       </div>
-      <nav class="slide-controls" aria-label="Slide controls"><button id="previous" class="quiet">← Previous</button><div class="dots" id="slide-dots"></div><span id="slide-count" aria-live="polite">1 / 5</span><button id="next">Next →</button></nav>
+      <nav class="slide-controls" aria-label="Slide controls"><button id="previous" class="quiet">← Previous</button><div class="dots" id="slide-dots"></div><span id="slide-count" aria-live="polite">1 / 6</span><button id="next">Next →</button></nav>
       <div id="media-controls" class="media-controls" hidden><button id="play-pause">Play video</button><label class="file-label">Replace video <input id="video-file" type="file" accept="video/*"></label></div>
     </section>
     <aside class="camera-panel" aria-label="Hand tracking">

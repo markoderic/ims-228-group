@@ -28,7 +28,7 @@
     slides.forEach((slide, i) => { slide.hidden = i !== next; });
     $('previous').disabled = next === 0; $('next').disabled = next === slides.length - 1;
     $('slide-count').textContent = (next + 1) + ' / ' + slides.length;
-    $('media-controls').hidden = next !== 3;
+    $('media-controls').hidden = next !== 5;
     [...$('slide-dots').children].forEach((dot, i) => {
       dot.classList.toggle('active', i === next); dot.setAttribute('aria-current', String(i === next));
     });
@@ -36,12 +36,12 @@
     feedback(source + ': slide ' + (next + 1) + ' of ' + slides.length + '. Keep the finger pose to swipe again.');
   }
   function pauseVideo(source) {
-    if (currentSlide !== 3) return;
+    if (currentSlide !== 5) return;
     mediaCommand++; video.pause(); updateMediaUI();
     feedback(source + ': video paused.');
   }
   async function playVideo(source) {
-    if (currentSlide !== 3) return;
+    if (currentSlide !== 5) return;
     const command = ++mediaCommand;
     try {
       if (video.ended) video.currentTime = 0;
@@ -192,7 +192,7 @@
       const valid = results.filter(hand => Array.isArray(hand.keypoints) && hand.keypoints.length === 21 &&
         hand.keypoints.every(p => Number.isFinite(p.x) && Number.isFinite(p.y)));
       if (valid.length) {
-        const action = gestures.update(mirrorHand(valid[0]), performance.now(), currentSlide === 3);
+        const action = gestures.update(mirrorHand(valid[0]), performance.now(), currentSlide === 5);
         if (action) performGesture(action);
       } else clearTracking();
       status('', 'LIVE');
